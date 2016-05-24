@@ -8,6 +8,6 @@ public interface BrouwerService {
 	
 	void create(Brouwer Brouwer);
 	List<Brouwer> findAll();
-	List<Brouwer> findByNaam(String zoekstring);
+	List<Brouwer> findByEersteLetter(String eersteLetter);
 
 }

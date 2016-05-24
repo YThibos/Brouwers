@@ -33,11 +33,11 @@ class BrouwerRepositoryImpl implements BrouwerRepository {
 	}
 
 	@Override
-	public List<Brouwer> findByNaam(String zoekstring) {
+	public List<Brouwer> findByEersteLetter(String eersteLetter) {
 		List<Brouwer> gevondenBrouwers = new ArrayList<>();
 		
 		for (Brouwer brouwer : brouwers.values()) {
-			if (brouwer.getNaam().contains(zoekstring)) {
+			if (brouwer.getNaam().startsWith(eersteLetter)) {
 				gevondenBrouwers.add(brouwer);
 			}
 		}

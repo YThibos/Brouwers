@@ -29,8 +29,8 @@ class BrouwerServiceImpl implements BrouwerService {
 	}
 
 	@Override
-	public List<Brouwer> findByNaam(String zoekstring) {
-		return brouwerRepository.findByNaam(zoekstring);
+	public List<Brouwer> findByEersteLetter(String eersteLetter) {
+		return brouwerRepository.findByEersteLetter(eersteLetter);
 	}
 	
 	
