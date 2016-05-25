@@ -32,7 +32,5 @@ class BrouwerServiceImpl implements BrouwerService {
 	public List<Brouwer> findByEersteLetter(String eersteLetter) {
 		return brouwerRepository.findByEersteLetter(eersteLetter);
 	}
-	
-	
 
 }

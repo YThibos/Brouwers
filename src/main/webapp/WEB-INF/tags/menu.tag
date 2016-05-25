@@ -5,7 +5,8 @@
 	
 		<li><a href="<c:url value='/'/>">&#8962;</a></li>
 		<li><a href="<c:url value="/brouwers/"/>">Brouwers</a></li>
-		<li><a href="<c:url value="/brouwers/beginnaam"/>">Zoeken op naam</a></li>
+		<li><a href="<c:url value="/brouwers/beginnaam"/>">Zoeken op letter</a></li>
+		<li><a href="<c:url value="/brouwers/zoekenopnaam"/>">Zoeken op naam</a></li>
 		<li><a href="<c:url value="/brouwers/toevoegen"/>">Toevoegen</a></li>
 	
 <%-- 		<li><a href="<c:url value='/'/>">&#8962;</a></li> --%>

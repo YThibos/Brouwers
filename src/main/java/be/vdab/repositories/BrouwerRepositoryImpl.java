@@ -37,7 +37,7 @@ class BrouwerRepositoryImpl implements BrouwerRepository {
 		List<Brouwer> gevondenBrouwers = new ArrayList<>();
 		
 		for (Brouwer brouwer : brouwers.values()) {
-			if (brouwer.getNaam().startsWith(eersteLetter)) {
+			if (brouwer.getNaam().toLowerCase().startsWith(eersteLetter.toLowerCase())) {
 				gevondenBrouwers.add(brouwer);
 			}
 		}
