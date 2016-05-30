@@ -2,6 +2,12 @@ package be.vdab.entities;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+
 import be.vdab.valueobjects.Adres;
 
 public class Brouwer implements Serializable {
@@ -10,11 +16,17 @@ public class Brouwer implements Serializable {
 	
 	// MEMBER VARIABLES
 	private long id;
+	@NotBlank
 	private String naam;
-	private Integer omzet;
+	@NotNull
+	@Valid
 	private Adres adres;
+	@Min(0)
+	private Integer omzet;
 	
 	// CONSTRUCTOR
+	public Brouwer() {}
+	
 	public Brouwer(String naam, Adres adres) {
 		this.id = -1;
 		this.naam = naam;
