@@ -62,6 +62,9 @@ public class Brouwer implements Serializable {
 		return adres;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
 	public void setBrouwerNr(long id) {
 		this.id = id;
 	}
@@ -106,6 +109,7 @@ public class Brouwer implements Serializable {
 	public String toString() {
 		return "Brouwer [id=" + id + ", naam=" + naam + ", omzet=" + omzet + "]";
 	}
+
 	
 	
 }

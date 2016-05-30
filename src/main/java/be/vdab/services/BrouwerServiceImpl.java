@@ -4,11 +4,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 import be.vdab.entities.Brouwer;
 import be.vdab.repositories.BrouwerRepository;
 
-@Service
+@EnableTransactionManagement
+@ReadOnlyTransactionalService
 class BrouwerServiceImpl implements BrouwerService {
 
 	private final BrouwerRepository brouwerRepository;
@@ -19,6 +23,7 @@ class BrouwerServiceImpl implements BrouwerService {
 	}
 	
 	@Override
+	@ModifyingTransactionalServiceMethod
 	public void create(Brouwer brouwer) {
 		brouwerRepository.create(brouwer);
 	}
