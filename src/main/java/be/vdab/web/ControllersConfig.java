@@ -10,6 +10,9 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+
+
+
 @Configuration
 @EnableWebMvc
 @ComponentScan
@@ -34,7 +37,7 @@ public class ControllersConfig extends WebMvcConfigurerAdapter {
 	}
 
 	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {		
 		registry.addResourceHandler("/images/**").addResourceLocations("/images/");
 		registry.addResourceHandler("/styles/**").addResourceLocations("/styles/");
 		registry.addResourceHandler("/scripts/**").addResourceLocations("/scripts/");
