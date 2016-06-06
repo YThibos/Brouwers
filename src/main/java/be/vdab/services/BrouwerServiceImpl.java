@@ -3,6 +3,7 @@ package be.vdab.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import be.vdab.entities.Brouwer;
@@ -27,12 +28,12 @@ class BrouwerServiceImpl implements BrouwerService {
 
 	@Override
 	public List<Brouwer> findAll() {
-		return brouwerRepository.findAll();
+		return brouwerRepository.findAll(new Sort("naam"));
 	}
 
 	@Override
 	public List<Brouwer> findByEersteLetter(String eersteLetter) {
-		return brouwerRepository.findByNaamStartingWith(eersteLetter);
+		return brouwerRepository.findByNaamStartsWithOrderByNaamAsc(eersteLetter);
 	}
 
 }

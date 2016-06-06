@@ -8,6 +8,6 @@ import be.vdab.entities.Brouwer;
 
 public interface BrouwerRepository extends JpaRepository<Brouwer, Long> {
 
-	List<Brouwer> findByNaamStartingWith(String eersteLetter);
+	List<Brouwer> findByNaamStartsWithOrderByNaamAsc(String eersteLetter);
 	
 }
