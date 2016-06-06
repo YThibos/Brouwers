@@ -2,12 +2,12 @@ package be.vdab.repositories;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import be.vdab.entities.Brouwer;
 
-public interface BrouwerRepository {
+public interface BrouwerRepository extends JpaRepository<Brouwer, Long> {
 
-	void create(Brouwer brouwer);
-	List<Brouwer> findAll();
-	List<Brouwer> findByEersteLetter(String eersteLetter);
+	List<Brouwer> findByNaamStartingWith(String eersteLetter);
 	
 }

@@ -22,7 +22,7 @@ class BrouwerServiceImpl implements BrouwerService {
 	@Override
 	@ModifyingTransactionalServiceMethod
 	public void create(Brouwer brouwer) {
-		brouwerRepository.create(brouwer);
+		brouwerRepository.save(brouwer);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ class BrouwerServiceImpl implements BrouwerService {
 
 	@Override
 	public List<Brouwer> findByEersteLetter(String eersteLetter) {
-		return brouwerRepository.findByEersteLetter(eersteLetter);
+		return brouwerRepository.findByNaamStartingWith(eersteLetter);
 	}
 
 }
